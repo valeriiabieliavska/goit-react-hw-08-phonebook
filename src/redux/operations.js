@@ -1,59 +1,42 @@
 import axios from 'axios';
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://642b0f97b11efeb759a9b5f6.mockapi.io';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
-  async (_, thunkAPI) => {
+  async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('/contacts');
-      return response.data;
+      const res = await axios.get('/contacts');
+
+      return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
   }
 );
 
 export const addContact = createAsyncThunk(
   'contacts/addContact',
-  async (customer, thunkAPI) => {
+  async (userCredentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post('/contacts', {
-        name: customer.name,
-        number: customer.number,
-      });
-      return response.data;
+      const res = await axios.post('/contacts', userCredentials);
+
+      return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
-  },
-  {
-    condition: (_, { getState }) => {
-      const isLoading = getState().contacts.isLoading;
-      if (isLoading) {
-        return false;
-      }
-    },
   }
 );
 
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
-  async (contactId, thunkAPI) => {
+  async (contactId, { rejectWithValue }) => {
     try {
-      await axios.delete(`/contacts/${contactId}`);
-      return contactId;
+      const res = await axios.delete(`contacts/${contactId}`);
+
+      return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
-  },
-  {
-    condition: (_, { getState }) => {
-      const isLoading = getState().contacts.isLoading;
-      if (isLoading) {
-        return false;
-      }
-    },
   }
 );
