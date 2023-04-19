@@ -38,29 +38,29 @@ const Register = () => {
   };
 
   const registerForm = (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label}>
-        Username <input type="text" name="name" />
+    <form className={css.registerForm} onSubmit={handleSubmit}>
+      <label className={css.registerLable}>
+        Username <input className={css.registerInput} type="text" name="name" />
       </label>
-      <label className={css.label}>
+      <label className={css.registerLable}>
         Email
-        <input
+        <input className={css.registerInput}
           type="email"
           name="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           title="Invalid email address"
         />
       </label>
-      <label className={css.label}>
+      <label className={css.registerLable}>
         Password
-        <input
+        <input className={css.registerInput}
           type="password"
           name="password"
           pattern="(?=.*[a-z])(?=.*[1-9]).{8,}"
           title="The password cannot be less than 7 characters and must contain at least one number, one lowercase latin letter."
         />
       </label>
-      <button className={css.btnRegister} type="submit">
+      <button className={css.registerBtn} type="submit">
         Register
       </button>
     </form>
@@ -73,7 +73,7 @@ const Register = () => {
       {!isLoading && registerForm}
 
       {error && !isLoading && (
-        <h3 styled={{ color: 'red' }}>{error || 'Error...'}</h3>
+        <h3 style={{ color: 'red' }}>{error || 'Error...'}</h3>
       )}
     </div>
   );

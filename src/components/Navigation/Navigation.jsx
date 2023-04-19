@@ -14,9 +14,9 @@ const Navigation = () => {
       {isLoggedIn ? (
         <UserMenu />
       ) : (
-        <ul>
-          <NavLink to="/login">Sign in</NavLink>
-          <NavLink to="/register">Sign up</NavLink>
+        <ul className={css.navList}>
+          <NavLink className={css.navItem} to="/login">Log in</NavLink>
+          <NavLink className={css.navItem} to="/register">Sign in</NavLink>
         </ul>
       )}
     </nav>

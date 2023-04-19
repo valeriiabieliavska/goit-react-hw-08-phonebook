@@ -35,13 +35,16 @@ const Login = () => {
 
   const loginForm = (
     <form className={css.loginForm} onSubmit={handleSubmit}>
-      <label>
-        Email <input type="email" name="email" />
+      <label className={css.loginLable}>
+        Email <input className={css.loginInput} type="email" name="email" />
       </label>
-      <label>
-        Password <input type="password" name="password" />
+      <label className={css.loginLable}>
+        Password{' '}
+        <input className={css.loginInput} type="password" name="password" />
       </label>
-      <button type="submit">Log In</button>
+      <button className={css.loginBtn} type="submit">
+        Log In
+      </button>
     </form>
   );
 

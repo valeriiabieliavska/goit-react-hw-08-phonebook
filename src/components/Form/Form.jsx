@@ -20,6 +20,11 @@ const Form = () => {
     }
   };
 
+  const reset = () => {
+    setName('');
+    setNumber('');
+  };
+
   const handleAddContact = event => {
     event.preventDefault();
     const newContact = { id: nanoid(), name, number };
@@ -33,17 +38,13 @@ const Form = () => {
     if (existingContact) {
       alert(`${newContact.name} is already in contacts`);
     } else {
+      reset();
       dispatch(addContact(newContact));
     }
-    reset();
-  };
-
-  const reset = () => {
-    setName('');
-    setNumber('');
   };
 
   return (
+    <div className={css.wrap}>
     <form onSubmit={handleAddContact} className={css.contactsForm}>
       <label className={css.inputName}>
         Name
@@ -74,7 +75,8 @@ const Form = () => {
       <button className={css.btn} type="submit">
         Add contact
       </button>
-    </form>
+      </form>
+      </div>
   );
 };
 

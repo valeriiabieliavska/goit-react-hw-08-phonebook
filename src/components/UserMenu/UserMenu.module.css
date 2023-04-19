@@ -1,0 +1,29 @@
+.userWrap {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userName {
+  font-size: large;
+  color: rgb(80, 48, 11);
+}
+
+.logoutBtn {
+  width: 140px;
+  padding: 5px;
+
+  border-radius: 20px;
+
+  border-style: solid;
+  border-color: rgb(247, 185, 109);
+  background-color: rgb(247, 185, 109);
+}
+
+.logoutBtn:hover,
+.logoutBtn:focus {
+  border-color: rgb(247, 185, 109);
+  background-color: bisque;
+}

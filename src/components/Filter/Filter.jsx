@@ -12,6 +12,7 @@ const Filter = () => {
   };
 
   return (
+    <div className={css.filterWrap}>
     <label className={css.filter}>
       Filter contacts by name
       <input
@@ -20,7 +21,8 @@ const Filter = () => {
         onChange={handleFilterChange}
         type="text"
       />
-    </label>
+      </label>
+      </div>
   );
 };
 

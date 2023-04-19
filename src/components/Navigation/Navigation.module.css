@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: bisque;
+}
+
+.navList {
+  display: flex;
+  gap: 30px;
+}
+
+.navItem {
+  text-decoration: none;
+color: rgb(80, 48, 11);
+  font-size: x-large;
+}

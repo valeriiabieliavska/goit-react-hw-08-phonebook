@@ -1,26 +1,43 @@
+.wrap {
+  padding: 20px;
+}
 .contactsForm {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .inputName {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: large;
+  color: rgb(80, 48, 11);
 }
 
 .input {
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(80, 48, 11);
+  outline: none;
 }
 
 .btn {
-    width: 140px;
-    padding: 10px;
-    margin-left: 40px;
-    border-radius: 20px;
+  width: 140px;
+  padding: 10px;
+  margin-left: 40px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(247, 185, 109);
+  background-color: rgb(247, 185, 109);
+}
+
+.btn:hover,
+.btn:focus {
+  border-style: solid;
+  border-color: rgb(247, 185, 109);
+  background-color: bisque;
 }

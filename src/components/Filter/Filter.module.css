@@ -1,12 +1,19 @@
+.filterWrap {
+  padding: 40px;
+}
+
 .filter {
   font-size: large;
-margin-top: 40px;
-  padding: 20px;
+  color: rgb(80, 48, 11);
 }
 
 .filterInput {
-  width: 160px;
-  padding: 5px;
-  border-radius: 10px;
+  width: 200px;
   margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(80, 48, 11);
+  color: rgb(80, 48, 11);
+  outline: none;
 }

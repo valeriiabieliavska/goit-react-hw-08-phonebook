@@ -1,0 +1,51 @@
+.registerForm {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.registerInput {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(80, 48, 11);
+  color: rgb(80, 48, 11);
+  margin-left: 20px;
+  outline: none;
+}
+
+.registerLable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  font-size: large;
+  color: rgb(80, 48, 11);
+}
+
+.registerBtn {
+  width: 140px;
+  padding: 10px;
+  margin-left: 40px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(247, 185, 109);
+  background-color: rgb(247, 185, 109);
+  color: rgb(80, 48, 11);
+}
+
+.registerBtn:hover,
+.registerBtn:focus {
+  border-color: rgb(247, 185, 109);
+  background-color: bisque;
+}
+
+.registerWrap {
+  margin-left: auto;
+  margin-right: auto;
+}
