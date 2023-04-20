@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { register } from 'redux/auth/authOperations';
 import { selectIsLoading, selectError } from 'redux/auth/selectors';
-import { resetAuthError } from 'redux/auth/authSlice';
+
 import Loader from 'components/Loader/Loader';
 
 import css from './Register.module.css';
@@ -13,10 +12,6 @@ const Register = () => {
 
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(resetAuthError());
-  }, [dispatch]);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -44,7 +39,8 @@ const Register = () => {
       </label>
       <label className={css.registerLable}>
         Email
-        <input className={css.registerInput}
+        <input
+          className={css.registerInput}
           type="email"
           name="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
@@ -53,7 +49,8 @@ const Register = () => {
       </label>
       <label className={css.registerLable}>
         Password
-        <input className={css.registerInput}
+        <input
+          className={css.registerInput}
           type="password"
           name="password"
           pattern="(?=.*[a-z])(?=.*[1-9]).{8,}"

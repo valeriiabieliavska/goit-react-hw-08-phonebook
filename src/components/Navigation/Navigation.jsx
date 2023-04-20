@@ -15,8 +15,12 @@ const Navigation = () => {
         <UserMenu />
       ) : (
         <ul className={css.navList}>
-          <NavLink className={css.navItem} to="/login">Log in</NavLink>
-          <NavLink className={css.navItem} to="/register">Sign in</NavLink>
+          <NavLink className={css.navItem} to="/login">
+            Log in
+          </NavLink>
+          <NavLink className={css.navItem} to="/register">
+            Sign in
+          </NavLink>
         </ul>
       )}
     </nav>

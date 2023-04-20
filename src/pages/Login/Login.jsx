@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { logIn } from 'redux/auth/authOperations';
 import { selectIsLoading, selectError } from 'redux/auth/selectors';
-import { resetAuthError } from 'redux/auth/authSlice';
 import Loader from 'components/Loader/Loader';
 
 import css from './Login.module.css';
@@ -13,10 +11,6 @@ const Login = () => {
 
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(resetAuthError());
-  }, [dispatch]);
 
   const handleSubmit = event => {
     event.preventDefault();

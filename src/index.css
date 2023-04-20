@@ -29,3 +29,7 @@ p {
 ul {
   list-style: none;
 }
+
+.active {
+  color: rgba(228, 99, 13, 0.761);
+}
