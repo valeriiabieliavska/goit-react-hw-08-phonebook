@@ -9,18 +9,26 @@ const ContactList = () => {
 
   const filteredContacts = useSelector(selectFilteredContacts);
 
+  console.log(filteredContacts);
+
   return (
     <ul className={css.list}>
       {filteredContacts &&
         filteredContacts.map(({ id, name, number }) => (
           <li className={css.item} key={id}>
-            <p className={css.contact}>
-              {name}: {number}
-            </p>
+            <p className={css.contactName}>{name}</p>
+            <p className={css.contactNumber}>{number}</p>
             <button
-              className={css.button}
+              className={css.btnDelete}
               type="button"
-              onClick={() => dispatch(deleteContact(id))}
+              onClick={() => {
+                const contactToDelete = filteredContacts.find(
+                  contact => contact.id === id
+                );
+                if (contactToDelete) {
+                  dispatch(deleteContact(id));
+                }
+              }}
             >
               Delete
             </button>

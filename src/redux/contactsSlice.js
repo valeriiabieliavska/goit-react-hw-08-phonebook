@@ -43,6 +43,7 @@ export const contactsSlice = createSlice({
         state.error = null;
         state.items.push(action.payload);
       })
+
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;

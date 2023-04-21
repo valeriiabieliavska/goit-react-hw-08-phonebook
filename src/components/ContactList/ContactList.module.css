@@ -6,14 +6,13 @@
 }
 
 .btnDelete {
-  margin-left: 100px;
-  margin-top: 10px;
   width: 100px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 20px;
   border-style: solid;
   border-color: rgb(247, 185, 109);
   background-color: rgb(247, 185, 109);
+  color: rgb(80, 48, 11);
 }
 
 .btnDelete:hover,
@@ -23,5 +22,27 @@
 }
 
 .item {
-  width: 300px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.contactName {
+  padding: 10px;
+  margin-right: 10px;
+  width: 200px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: bisque;
+  color: rgb(80, 48, 11);
+}
+
+.contactNumber {
+  padding: 10px;
+  margin-right: 10px;
+  width: 80px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: bisque;
+  color: rgb(80, 48, 11);
 }
